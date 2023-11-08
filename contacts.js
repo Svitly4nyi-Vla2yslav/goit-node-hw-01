@@ -2,8 +2,11 @@
 const fs = require("fs/promises");
 /*
  * Розкоментуй і запиши значення
- * const contactsPath = ;
+ * 
  */
+const contactsPath = require("./db/contacts.json");
+console.log(contactsPath)
+
 
 // TODO: задокументувати кожну функцію
 function listContacts() {
