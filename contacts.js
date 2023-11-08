@@ -5,7 +5,7 @@ const fs = require("fs/promises");
  * 
  */
 const contactsPath = require("./db/contacts.json");
-console.log(contactsPath)
+
 
 
 // TODO: задокументувати кожну функцію
