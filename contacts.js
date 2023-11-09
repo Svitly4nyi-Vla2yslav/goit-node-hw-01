@@ -1,19 +1,17 @@
-// contacts.js
 const fs = require("fs/promises");
 const path = require("path");
-/*
- * Розкоментуй і запиши значення
- * 
- */
-const path = require("path")
+
 const contactsPath = path.join(__dirname, "contacts.json");
 
  
 
 // TODO: задокументувати кожну функцію
 async function listContacts() {
-  const data = await fs.readFile(contactsPath, "utf-8" )
-  return JSON.parse(data)
+  try { const data = await fs.readFile(contactsPath, "utf-8" )
+  return JSON.parse(data);
+} catch (error) {
+  console.log(error)
+}
     // ...твій код. Повертає масив контактів.
   }
   
