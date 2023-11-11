@@ -4,11 +4,11 @@ const contacts = require("./contacts")
 
 const program = new Command();
 program
-  .option('-a, --action <type>', 'choose action')
-  .option('-i, --id <type>', 'user id')
-  .option('-n, --name <type>', 'user name')
-  .option('-e, --email <type>', 'user email')
-  .option('-p, --phone <type>', 'user phone');
+    .option('-a, --action <type>', 'choose action')
+    .option('-i, --id <type>', 'user id')
+    .option('-n, --name <type>', 'user name')
+    .option('-e, --email <type>', 'user email')
+    .option('-p, --phone <type>', 'user phone');
 
 program.parse();
 const argv = program.opts();
@@ -24,7 +24,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 
         case 'get':
             const oneContact = await contacts.getContactById(id);
-           console.log(oneContact);
+            console.log(oneContact);
             break;
 
         case 'add':
